@@ -45,13 +45,13 @@
             <td>第四个报表</td>
             <td>2020-04-24</td>
             <td><div class="btn-group btn-group-xs">
-                <button type="button" class="btn btn-info" onclick="onLineReadPDF(4)">查看</button>
+                <button type="button" class="btn btn-info" onclick="viewPDF(4)">查看</button>
             </div></td>
         </tr><tr>
             <td>第五个报表</td>
             <td>2020-04-25</td>
             <td><div class="btn-group btn-group-xs">
-                <button type="button" class="btn btn-info" onclick="onLineReadPDF(5)">查看</button>
+                <button type="button" class="btn btn-info" onclick="viewPDF(5)">查看</button>
             </div></td>
         </tr>
         </tbody>
@@ -70,6 +70,14 @@
         var pos=curWwwPath.indexOf(pathName);
         var localhostPath=curWwwPath.substring(0,pos);
         window.open(localhostPath + "/static/web/viewer.html?file=/preview?id%3D"+id);
+    }
+
+    function viewPDF(id) {
+        var curWwwPath=window.document.location.href;
+        var pathName=window.document.location.pathname;
+        var pos=curWwwPath.indexOf(pathName);
+        var localhostPath=curWwwPath.substring(0,pos);
+        window.open(localhostPath + "/static/web/viewer.html?file=/view/"+id);
     }
 </script>
 </body>
