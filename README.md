@@ -1,6 +1,6 @@
 # spring-boot-pdf
 
-> pdf传参，直接在file=后面给出pdf路径或者跟上一个pdf文档的请求地址
+> pdf传参，直接在file=后面给出pdf路径或者pdf文档的请求接口
 
 > 1.使用%3D代理“=”避免转义，方便后台取参数
 

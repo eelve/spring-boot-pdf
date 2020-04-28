@@ -30,6 +30,7 @@ public class PdfContrroller {
     @RequestMapping(value = "/preview")
     public void dashboardView(HttpServletRequest request, HttpServletResponse response, String id){
         log.info("文件id为：" + id);
+        //验证参数，然年就可用查询出真实的文件地址
         File file = null;
         try{
             switch (id){
@@ -68,6 +69,7 @@ public class PdfContrroller {
     @RequestMapping(value = "/view/{id}")
     public void view(HttpServletRequest request, HttpServletResponse response, @PathVariable(value="id") String id){
         log.info("文件id为：" + id);
+        //验证参数，然年就可用查询出真实的文件地址
         File file = null;
         try{
             switch (id){
