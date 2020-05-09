@@ -52,7 +52,7 @@ public class PdfContrroller {
     @RequestMapping("/html2pdf/{pageUrl}")
     public String html2pdf(@PathVariable(value="pageUrl") String pageUrl) {
         try {
-            pageUrl ="http://localhost:8080/" + pageUrl;
+            pageUrl ="http://localhost:9091/" + pageUrl;
             String fileRelativePath = html2PdfService.excute(pageUrl);
             return "redirect:" + fileRelativePath;
         } catch (Exception e) {
