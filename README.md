@@ -14,12 +14,12 @@
 
 ## 后端生成pdf
 
-采用wkhtmltopdf，需要生成的页面[http://localhost:8080/view](http://localhost:8080/view)，尽量是静态页面，动态页面会遇到各种各样的问题。
+采用wkhtmltopdf，需要生成的页面[http://localhost:9091/view](http://localhost:9091/view)，尽量是静态页面，动态页面会遇到各种各样的问题。
 
 >wkhtmltopdf 0.12.5 (with patched qt)
 >thymeleaf
 
-访问[http://localhost:8080/html2pdf/view](http://localhost:8080/html2pdf/view),即可导出
+访问[http://localhost:9091/html2pdf/view](http://localhost:9091/html2pdf/view),即可导出
 
 ```java
 @RequestMapping("/view")
