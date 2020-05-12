@@ -438,7 +438,12 @@ public class FilesUtils {
      * @return
      */
     public static boolean checkFolderAndCreate(String absoultOutputFilePath){
-        int index = absoultOutputFilePath.lastIndexOf("/");
+        int index = 0;
+        if (OsInfo.isWindows()) {
+            index = absoultOutputFilePath.lastIndexOf("\\");
+        }else {
+            index = absoultOutputFilePath.lastIndexOf("/");
+        }
         if(index > 0) {
             String dirPath = absoultOutputFilePath.substring(0,index);
             File file = new File(dirPath);
