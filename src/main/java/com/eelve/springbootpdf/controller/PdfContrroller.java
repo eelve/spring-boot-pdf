@@ -38,11 +38,11 @@ public class PdfContrroller {
     }
 
     @RequestMapping("/view")
-    public ModelAndView echart(){
+    public ModelAndView echart() throws InterruptedException {
         ModelAndView mav=new ModelAndView();
-        int data[] = {10,15, 30, 45, 55, 60, 62, 80,80,62, 60, 55, 45, 30, 15, 10};
+        int data[] = {10,15, 30};
         List list = new ArrayList<>(Arrays.asList(data));
-        int data2[] ={8,5, 25, 30, 35, 55, 62, 78,65,55, 60, 45, 42, 15, 12, 5};
+        int data2[] ={62, 78,65};
         mav.setViewName("view");
         mav.addObject("data1",data);
         mav.addObject("data2",data2);
