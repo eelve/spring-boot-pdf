@@ -18,6 +18,20 @@
 
 >wkhtmltopdf 0.12.5 (with patched qt)
 >thymeleaf
+>需要注意页面排版
+
+如果需要避免分页可以用以下两种方式:
+
+- **1.page-break-inside**
+```javascript
+<style type="text/css">
+    div,table, tr, td, th, tbody, thead, tfoot {page-break-inside: avoid !important;}
+</style>
+```
+- **2.page-break-before**
+```javascript
+<div style="page-break-before: left;"></div>
+```
 
 访问[http://localhost:9091/html2pdf/view](http://localhost:9091/html2pdf/view),即可导出
 
