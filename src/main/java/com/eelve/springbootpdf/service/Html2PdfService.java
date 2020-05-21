@@ -66,7 +66,7 @@ public class Html2PdfService {
             //cmdStr.append("chmod +x ").append(absoultExePath).append(" && ");
             CmdUtils.excute("chmod +x " + absoultExePath);
         }
-        cmdStr.append(absoultExePath).append(" --disable-smart-shrinking --load-error-handling ignore --header-center IaaS层资源使用月度运营报告  --header-line --header-spacing 3 --footer-spacing 3 --footer-center \"- 第 [page] 页-\" ").append(pageUrl).append(" ").append(absoultOutputPath);
+        cmdStr.append(absoultExePath).append(" --disable-smart-shrinking --load-error-handling ignore --header-center 资源使用月度运营报告  --header-line --header-spacing 3 --footer-spacing 3 --footer-center \"- 第 [page] 页-\" ").append(pageUrl).append(" ").append(absoultOutputPath);
         return cmdStr.toString();
     }
 
