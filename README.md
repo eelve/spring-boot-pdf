@@ -17,27 +17,40 @@
 采用wkhtmltopdf，需要生成的页面[http://localhost:9091/view](http://localhost:9091/view)，尽量是静态页面，动态页面会遇到各种各样的问题。
 
 >wkhtmltopdf 0.12.5 (with patched qt)
+
 >thymeleaf
+
 >需要注意页面排版
+
 >尽量使用静态页面，可以执行js，但是不能动态生成dom树
+
 >添加水印，可以利用网页背景实现，但是要注意找到合适尺寸的图片
+
+>导出页面宽度大约再800px左右，超出的会被换行，或者不显示
 
 如果需要避免分页可以用以下两种方式:
 
 - **1.page-break-inside**
+
 ```javascript
+
 <style type="text/css">
     div,table, tr, td, th, tbody, thead, tfoot {page-break-inside: avoid !important;}
 </style>
+
 ```
 - **2.page-break-before**
+
 ```javascript
+
 <div style="page-break-before: left;"></div>
+
 ```
 
 访问[http://localhost:9091/html2pdf/view](http://localhost:9091/html2pdf/view),即可导出
 
 ```java
+
 @RequestMapping("/view")
     public ModelAndView echart(){
         ModelAndView mav=new ModelAndView();
@@ -60,11 +73,13 @@
             return "/error";
         }
     }
+
 ```
 
-最后附上参数
+最后附上配置参数，使用`wkhtmltopdf -H`查看：
 
 ```javascript
+
 Microsoft Windows [版本 10.0.18363.815]
 (c) 2019 Microsoft Corporation。保留所有权利。
 
@@ -472,4 +487,5 @@ Contact:
 
 
 C:\Users\Chirius>
+
 ```
