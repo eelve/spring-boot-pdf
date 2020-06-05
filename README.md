@@ -6,7 +6,7 @@
 
 > 2.使用@PathVariable直接取参
 
-[pdf.js插件](https://github.com/mozilla/pdf.js)
+[使用pdf.js插件](https://github.com/mozilla/pdf.js)
 
 ![list](./images/list.png)
 ![pdf](./images/pdf.png)
@@ -24,9 +24,11 @@
 
 >尽量使用静态页面，可以执行js，但是不能动态生成dom树
 
->添加水印，可以利用网页背景实现，但是要注意找到合适尺寸的图片
+>添加水印，可以利用网页背景实现，但是要注意找到合适尺寸的图片，然后注意调试，尽量避免水印图片被切割
 
 >导出页面宽度大约再800px左右，超出的会被换行，或者不显示
+
+>在linux服务器上的时候，如果中文出现乱码，可以添加一个中文字体即可
 
 如果需要避免分页可以用以下两种方式:
 
