@@ -78,7 +78,7 @@
 
 ```
 
-最后附上配置参数，使用`wkhtmltopdf -H`查看：
+最后附上配置参数，可以使用`wkhtmltopdf -H`查看：
 
 ```javascript
 
